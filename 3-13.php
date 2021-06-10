@@ -4,10 +4,10 @@
     echo "整数値B：";
     $re_b = (int)fgets(STDIN);
 
-    if ($re_a < $re_b)
-        $b = $re_b;
+    if ($re_a > $re_b)
+        $b = $re_a - $re_b;
     else
-        $b = $re_a;
+        $b = $re_b - $re_a;
     
-    echo $b."の方が大きいです\n";
+    echo "2つの数の差は".$b."です\n";
 ?>

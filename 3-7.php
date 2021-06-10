@@ -1,8 +1,8 @@
 <?php
     echo "整数値A：";
-    $re_a = fgets(STDIN);
+    $re_a = (int)fgets(STDIN);
     echo "整数値B：";
-    $re_b = fgets(STDIN);
+    $re_b = (int)fgets(STDIN);
 
     if ($re_a > $re_b)
         echo "Aの方が大きいです\n";

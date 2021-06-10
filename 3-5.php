@@ -1,6 +1,6 @@
 <?php
     echo "整数値：";
-    $re_a = fgets(STDIN);
+    $re_a = (int)fgets(STDIN);
 
     if ($re_a > 0)
         echo "その値は正です\n";
