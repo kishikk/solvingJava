@@ -4,23 +4,34 @@ b = []
 
 i = 0
 while i < x
-    print i.to_s + "行目の列数：" 
-    a = gets.to_i
-    b << a
+    print "#{i}行目の列数：" 
+    b << gets.to_i
     i += 1
 end
 
-print b
-
-ret = []
 puts "各要素の値を入力せよ。"
 i = 0
+y = []
 while i < x
     j = 0
-    while j < b[j]
-        printf("a[%d][%d]：", i, j)
-        ret = gets.to_i
+    ret = []
+    while j < b[i]
+        print  "a[#{i}][#{j}]:  "
+        ret << gets.to_i
         j += 1
     end
+    y << ret
+    i += 1
+end
+
+puts "配列Cの各要素の値は次のようになっています。"
+i = 0
+while i < y.size
+    j = 0
+    while j < y[i].size
+      print "#{y[i][j]}"
+      j += 1
+    end
+    puts
     i += 1
 end
