@@ -1,16 +1,26 @@
-y = ["January", "February"]
-arr_var = []
+monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
 
-x = gets.to_s
+last = -1
+puts "英語の月名を入力"
+puts "※先頭大文字、以降小文字入力"
 
-arr_var << x
-puts arr_var[0]
+begin 
+    while true do
+        begin
+            month = rand(12)
+        end while month == last
+        last = month
 
-puts arr_var[0] == y[1]
+        puts month.to_s + "月："
+        s = gets.chomp
 
-puts arr_var[0].bytesize
-puts y[1].bytesize
-puts arr_var[0].class
-puts y[1].class
-puts arr_var[0].encoding
-puts y[1].encoding
+        if monthList[month - 1] == s
+            break
+        else
+            puts "違います"
+        end
+    end
+
+    puts "正解です。もう一度？ 1...Yes/0...No："
+    re = gets.to_i
+end while re == 1

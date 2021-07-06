@@ -1,37 +1,26 @@
-print "要素数："
-a =  gets.to_i
+print "行数："
+x = gets.to_i
 b = []
 
 i = 0
-for n in i...a do
+while i < x
+    print i.to_s + "行目の列数：" 
+    a = gets.to_i
+    b << a
     i += 1
-    b[i] = 1 + rand(10)
 end
 
-i = 10
-for o in 1...i do
-    i -= 1
+print b
+
+ret = []
+puts "各要素の値を入力せよ。"
+i = 0
+while i < x
     j = 0
-    for q in j...a do
+    while j < b[j]
+        printf("a[%d][%d]：", i, j)
+        ret = gets.to_i
         j += 1
-        if b[j] >= i
-            puts "* "
-        else
-            puts "  "
-        end
-        puts
     end
-end
-
-i = 0
-for r in i...(2 * a) do
     i += 1
-    print '-'
-end
-
-i = 0
-for s in i...a do
-    i += 1
-    print (i % 10).to_i + (" ").to_i
-    puts 
 end
