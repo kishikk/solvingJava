@@ -1,4 +1,4 @@
-def sign0f(n)
+def signOf(n)
     if n > 0
         '1'
     elseif n < 0
