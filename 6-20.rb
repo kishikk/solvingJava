@@ -1,8 +1,8 @@
 print "行数："
 x = gets.to_i
-b = []
 
 i = 0
+b = []
 while i < x
     print "#{i}行目の列数：" 
     b << gets.to_i

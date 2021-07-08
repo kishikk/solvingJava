@@ -1,37 +1,31 @@
-print "要素数："
-a =  gets.to_i
-b = []
+print "クラス数："
+x = gets.to_i
 
 i = 0
-for n in i...a do
+cnum = []
+while i < x
+    print "#{i + 1}組の人数：" 
+    cnum << gets.to_i
     i += 1
-    b[i] = 1 + rand(10)
 end
 
-i = 10
-for o in 1...i do
-    i -= 1
+i = 0
+y = []
+while i < x
     j = 0
-    for q in j...a do
+    point = []
+    while j < cnum[i]
+        print "#{i + 1}組#{j + 1}番の点数："
+        point << gets.to_i
         j += 1
-        if b[j] >= i
-            puts "* "
-        else
-            puts "  "
-        end
-        puts
     end
+    y << point
+    i += 1
 end
 
+print "組　合計　平均\n"
 i = 0
-for r in i...(2 * a) do
+while i < y.size
+    print "#{i + 1}組 #{y[i].inject()}    #{(y[i].inject()/cnum[i].size}\n"
     i += 1
-    print '-'
-end
-
-i = 0
-for s in i...a do
-    i += 1
-    print (i % 10).to_i + (" ").to_i
-    puts 
 end
