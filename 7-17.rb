@@ -1,28 +1,51 @@
-def min0f(a)
-    min = a[0]
-    i = 1
+a = []
+def linearSearch(a, key)
+    i = 0
     while i < a.size
-        if a[i] < min
-            min = a[i]
+        if a[i] == key
+            return i
+        else
+            i += 1
         end
-        i += 1
     end
-    min
+    return -1
 end
 
-print "人数は："
-x = gets.to_i
+def linearSearchR(a, key)
+    i = a.size - 1
+    while i >= 0
+        if a[i] == key
+            return i
+        else
+            i -= 1
+        end
+    end
+    return -13
+end
 
-y = Array.new
-z = Array.new
+print "要素数："
+num = gets.to_i
+
 i = 0
-while i < x
-    print "#{i + 1}番目の身長："
-    y << gets.to_i
-    print "#{i + 1}番目の体重："
-    z << gets.to_i
+x = []
+while i < num
+    print "x[#{i}]: "
+    x << gets.to_i
     i += 1
 end
 
-print "最も背が低い人の身長は #{min0f(y)} です"
-print "最も痩せている人の体重は #{min0f(z)} です"
+print "探す値："
+ky = gets.to_i
+
+idxTop = linearSearch(x, ky)
+idxBtm = linearSearchR(x, ky)
+
+if idxTop == -1
+    puts "その値の要素は存在しません"
+elsif idxTop == idxBtm
+    puts "その値はx[#{idxTop}]にあります"
+else
+    puts "その値の要素は複数存在します"
+    puts "最も先頭のものはx[#{idxTop}]にあります"
+    puts "最も末尾のものはx[#{idxBtm}]にあります"
+end
