@@ -7,7 +7,7 @@ def signOf(n)
         '0'
     end
 end
-
+``    
 print "整数X："
 y　= gets.to_i
 

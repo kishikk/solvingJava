@@ -15,7 +15,7 @@ x = Array.new(num)
 i = 0
 while i < num
     print "x[#{i}] : "
-    x[i] = gets.to_i
+    x[i] =`` gets.to_i
     i += 1
 end
 
