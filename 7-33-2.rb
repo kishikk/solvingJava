@@ -5,7 +5,7 @@ def printArray(a)
         print "#{a[i]} "
         i += 1
     end
-    print a[a.size - 1]
+    print a[a.size]
     puts
 end
 
@@ -51,7 +51,8 @@ def printArray2(a)
             end
             j += 1
         end
-        puts a[i][a[i].size - 1]
+        puts a[i][a[i].size]
+        puts
         i += 1
     end
 end
@@ -93,7 +94,7 @@ while i < x
     i += 1
 end
 
-print "1次元配列x："
+print "1次元配列x：\n"
 puts printArray(m)
-print "2次元配列y："
+print "2次元配列y：\n"
 puts printArray(y)
